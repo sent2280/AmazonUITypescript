@@ -8,19 +8,15 @@
     "pretest": "npm run tsc",
     "test": "protractor outputjs/config.js"
   },
-
   "author": "Senthil",
   "license": "ISC",
-  
   "dependencies": {
     "@types/jasmine": "^2.8.8"
   },
-
-   "devDependencies": {
-     "@types/node": "~10.5.2",
-     "jasmine": "3.1.0",
-     "protractor": "~5.3.2",
-     "typescript": "~2.9.2"
-   } 
-
+  "devDependencies": {
+    "@types/node": "~10.5.2",
+    "jasmine": "3.1.0",
+    "protractor": "~5.3.2",
+    "typescript": "~2.9.2"
+  }
 }

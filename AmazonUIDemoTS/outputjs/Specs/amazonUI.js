@@ -41,93 +41,90 @@ var Wrappers_1 = require("../Util/Wrappers");
 var homePage = new HomePage_1.HomePage();
 var wrappers = new Wrappers_1.Wrappers();
 describe("To Test the amazon website", function () {
-    beforeEach(function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        protractor_1.browser.ignoreSynchronization = true;
-                        protractor_1.browser.manage().window().maximize();
-                        return [4 /*yield*/, protractor_1.browser.get("https://amazon.in/")];
-                    case 1:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
-            });
+    var _this = this;
+    beforeEach(function () { return __awaiter(_this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    protractor_1.browser.ignoreSynchronization = true;
+                    protractor_1.browser.manage().window().maximize();
+                    return [4 /*yield*/, protractor_1.browser.get("https://amazon.in/")];
+                case 1:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
         });
-    });
-    it("Launch the amazon website", function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _a, _b, _c, _d, _e, _f, priceList, sorted, i, stringPrice1, stringPrice2, price1, _g, price2, _h;
-            return __generator(this, function (_j) {
-                switch (_j.label) {
-                    case 0:
-                        _b = (_a = wrappers).waitForPresenceOfElement;
-                        return [4 /*yield*/, homePage.getSearchBox()];
-                    case 1: return [4 /*yield*/, _b.apply(_a, [_j.sent(), 30])];
-                    case 2:
-                        _j.sent();
-                        return [4 /*yield*/, homePage.getSearchBox().sendKeys("redmi")];
-                    case 3:
-                        _j.sent();
-                        return [4 /*yield*/, homePage.getSearchbutton().click()];
-                    case 4:
-                        _j.sent();
-                        _d = (_c = wrappers).waitForPresenceOfElement;
-                        return [4 /*yield*/, homePage.getSortByDropDown()];
-                    case 5: return [4 /*yield*/, _d.apply(_c, [_j.sent(), 30])];
-                    case 6:
-                        _j.sent();
-                        return [4 /*yield*/, homePage.getSortByDropDown().click()];
-                    case 7:
-                        _j.sent();
-                        _f = (_e = wrappers).waitForPresenceOfElement;
-                        return [4 /*yield*/, homePage.getPriceLowToHigh()];
-                    case 8: return [4 /*yield*/, _f.apply(_e, [_j.sent(), 30])];
-                    case 9:
-                        _j.sent();
-                        return [4 /*yield*/, homePage.getPriceLowToHigh().click()];
-                    case 10:
-                        _j.sent();
-                        return [4 /*yield*/, homePage.getAllProductsPrice()];
-                    case 11:
-                        priceList = _j.sent();
-                        console.log("Total items in the page = " + priceList.length);
-                        sorted = true;
-                        i = 0;
-                        _j.label = 12;
-                    case 12:
-                        if (!(i < priceList.length - 1)) return [3 /*break*/, 18];
-                        return [4 /*yield*/, priceList[i].getText()];
-                    case 13:
-                        stringPrice1 = _j.sent();
-                        return [4 /*yield*/, priceList[i + 1].getText()];
-                    case 14:
-                        stringPrice2 = _j.sent();
-                        _g = parseInt;
-                        return [4 /*yield*/, stringPrice1.replace(",", "")];
-                    case 15:
-                        price1 = _g.apply(void 0, [_j.sent(), 10]);
-                        _h = parseInt;
-                        return [4 /*yield*/, stringPrice2.replace(",", "")];
-                    case 16:
-                        price2 = _h.apply(void 0, [_j.sent(), 10]);
-                        console.log("The Values compared are " + price1 + " and " + price2);
-                        if (price1 > price2) {
-                            sorted = false;
-                            return [3 /*break*/, 18];
-                        }
-                        _j.label = 17;
-                    case 17:
-                        i++;
-                        return [3 /*break*/, 12];
-                    case 18:
-                        if (sorted == false) {
-                            throw new Error("Sorting Falied");
-                        }
-                        return [2 /*return*/];
-                }
-            });
+    }); });
+    it("Launch the amazon website", function () { return __awaiter(_this, void 0, void 0, function () {
+        var _a, _b, _c, _d, _e, _f, priceList, sorted, i, stringPrice1, stringPrice2, price1, _g, price2, _h;
+        return __generator(this, function (_j) {
+            switch (_j.label) {
+                case 0:
+                    _b = (_a = wrappers).waitForPresenceOfElement;
+                    return [4 /*yield*/, homePage.getSearchBox()];
+                case 1: return [4 /*yield*/, _b.apply(_a, [_j.sent(), 30])];
+                case 2:
+                    _j.sent();
+                    return [4 /*yield*/, homePage.getSearchBox().sendKeys("redmi")];
+                case 3:
+                    _j.sent();
+                    return [4 /*yield*/, homePage.getSearchbutton().click()];
+                case 4:
+                    _j.sent();
+                    _d = (_c = wrappers).waitForPresenceOfElement;
+                    return [4 /*yield*/, homePage.getSortByDropDown()];
+                case 5: return [4 /*yield*/, _d.apply(_c, [_j.sent(), 30])];
+                case 6:
+                    _j.sent();
+                    return [4 /*yield*/, homePage.getSortByDropDown().click()];
+                case 7:
+                    _j.sent();
+                    _f = (_e = wrappers).waitForPresenceOfElement;
+                    return [4 /*yield*/, homePage.getPriceLowToHigh()];
+                case 8: return [4 /*yield*/, _f.apply(_e, [_j.sent(), 30])];
+                case 9:
+                    _j.sent();
+                    return [4 /*yield*/, homePage.getPriceLowToHigh().click()];
+                case 10:
+                    _j.sent();
+                    return [4 /*yield*/, homePage.getAllProductsPrice()];
+                case 11:
+                    priceList = _j.sent();
+                    console.log("Total items in the page = " + priceList.length);
+                    sorted = true;
+                    i = 0;
+                    _j.label = 12;
+                case 12:
+                    if (!(i < priceList.length - 1)) return [3 /*break*/, 18];
+                    return [4 /*yield*/, priceList[i].getText()];
+                case 13:
+                    stringPrice1 = _j.sent();
+                    return [4 /*yield*/, priceList[i + 1].getText()];
+                case 14:
+                    stringPrice2 = _j.sent();
+                    _g = parseInt;
+                    return [4 /*yield*/, stringPrice1.replace(",", "")];
+                case 15:
+                    price1 = _g.apply(void 0, [_j.sent(), 10]);
+                    _h = parseInt;
+                    return [4 /*yield*/, stringPrice2.replace(",", "")];
+                case 16:
+                    price2 = _h.apply(void 0, [_j.sent(), 10]);
+                    console.log("The Values compared are " + price1 + " and " + price2);
+                    if (price1 > price2) {
+                        sorted = false;
+                        return [3 /*break*/, 18];
+                    }
+                    _j.label = 17;
+                case 17:
+                    i++;
+                    return [3 /*break*/, 12];
+                case 18:
+                    if (sorted == false) {
+                        throw new Error("Sorting Falied");
+                    }
+                    return [2 /*return*/];
+            }
         });
-    });
+    }); });
 });
